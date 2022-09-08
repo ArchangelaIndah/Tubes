@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inputUsername: TextInputLayout
     private lateinit var inputPassword: TextInputLayout
     private lateinit var mainLayout: ConstraintLayout
+    lateinit var mBundle: Bundle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,12 @@ class MainActivity : AppCompatActivity() {
         mainLayout = findViewById(R.id.mainLayout)
         val btnMasuk: Button = findViewById(R.id.btnMasuk)
         val btnDaftar: Button = findViewById(R.id.btnDaftar)
+
+        mBundle = intent.getBundleExtra("register")!!
+        inputUsername.getEditText()?.setText(mBundle.getString("Username"))
+        inputPassword.getEditText()?.setText(mBundle.getString("Password"))
+
+
 
         btnMasuk.setOnClickListener{
             inputUsername.getEditText()?.setText("")

@@ -67,8 +67,18 @@ class Register : AppCompatActivity() {
             val moveHome = Intent(this@Register, MainActivity::class.java)
             startActivity(moveHome)
 
+            if(inputUsername.getEditText()?.getText()==null){
+                inputUsername.getEditText()?.setText("")
+            }
+
+            if(inputPassword.getEditText()?.getText()==null){
+                inputPassword.getEditText()?.setText("")
+            }
+
+
             mBundle.putString("Username",inputUsername.getEditText()?.getText().toString())
             mBundle.putString("Password",inputPassword.getEditText()?.getText().toString())
+            intent.putExtra("register", mBundle)
 
             startActivity(intent)
         })
