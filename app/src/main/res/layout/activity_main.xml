@@ -12,7 +12,7 @@
         android:id="@+id/imageView"
         android:layout_width="240dp"
         android:layout_height="240dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -24,12 +24,12 @@
         style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="256dp"
         android:fontFamily="@font/balsamiq_sans_italic"
         android:text="Selamat Datang ^^"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
@@ -42,7 +42,8 @@
         android:paddingBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.37">
+        app:layout_constraintVertical_bias="0.325"
+        tools:layout_editor_absoluteX="24dp">
 
         <TextView
             android:id="@+id/textViewUsername"
@@ -103,26 +104,32 @@
         >
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnMasuk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Masuk" />
 
+
         <TextView
             android:id="@+id/txtBelumPunyaAkun"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-            />
+            android:text="Belum Punya Akun?"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/btnMasuk"
+            app:layout_constraintHorizontal_bias="0.464"
+            app:layout_constraintStart_toStartOf="@+id/btnMasuk"
+            app:layout_constraintTop_toTopOf="@+id/btnMasuk" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnClear"
+            android:id="@+id/btnDaftar"
             style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Clear Field" />
+            android:text="Daftar" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
