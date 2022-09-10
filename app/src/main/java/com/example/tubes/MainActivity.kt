@@ -27,11 +27,12 @@ class MainActivity : AppCompatActivity() {
         val btnMasuk: Button = findViewById(R.id.btnMasuk)
         val btnDaftar: Button = findViewById(R.id.btnDaftar)
 
-        mBundle = intent.getBundleExtra("register")!!
-        inputUsername.getEditText()?.setText(mBundle.getString("Username"))
-        inputPassword.getEditText()?.setText(mBundle.getString("Password"))
+        if(intent.getBundleExtra("register")!=null){
+            mBundle = intent.getBundleExtra("register")!!
+            inputUsername.getEditText()?.setText(mBundle.getString("Username"))
+            inputPassword.getEditText()?.setText(mBundle.getString("Password"))
 
-
+        }
 
         btnMasuk.setOnClickListener{
             inputUsername.getEditText()?.setText("")
