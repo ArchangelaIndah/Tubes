@@ -27,8 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="256dp"
         android:fontFamily="@font/balsamiq_sans_italic"
-        android:text="Selamat Datang ^^"
+        android:text="Bengkelaz"
         android:textColor="@color/black"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -46,12 +47,6 @@
         app:layout_constraintVertical_bias="0.325"
         tools:layout_editor_absoluteX="24dp">
 
-        <TextView
-            android:id="@+id/textViewUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Username" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputLayoutUsername"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -68,12 +63,6 @@
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/textViewPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Password" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputLayoutPassword"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -81,7 +70,6 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             app:errorEnabled="true"
-            app:helperText="Masukan password anda"
             app:startIconDrawable="@drawable/ic_lock_24">
 
             <com.google.android.material.textfield.TextInputEditText

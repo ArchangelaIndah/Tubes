@@ -15,6 +15,7 @@
         android:layout_marginTop="80dp"
         android:fontFamily="casual"
         android:text="DAFTAR AKUN"
+        android:textSize="24sp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,8 +43,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#CFB284"
+                android:layout_height="50dp"
                 android:inputType="text" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -59,7 +59,6 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#CFB284"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,7 +73,6 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#CFB284"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +87,6 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#CFB284"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,7 +101,6 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#CFB284"
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -135,7 +131,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Masuk"
+            android:text="Batal"
             android:textColor="#000000" />
     </LinearLayout>
 

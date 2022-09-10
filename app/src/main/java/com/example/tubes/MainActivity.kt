@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var mBundle: Bundle
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
