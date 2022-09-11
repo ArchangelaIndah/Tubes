@@ -15,6 +15,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mainLayout: ConstraintLayout
     lateinit var mBundle: Bundle
 
+    lateinit var tUsername : String
+    lateinit var tPassword : String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         getSupportActionBar()?.hide()
         super.onCreate(savedInstanceState)
@@ -56,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                 checkLogin = false
             }
 
-            if(username == "admin" && password == "admin")
+            if((username == "admin" && password == "admin") || (username == tUsername && password == tPassword))
                 checkLogin = true
             if(!checkLogin)
                 return@OnClickListener
