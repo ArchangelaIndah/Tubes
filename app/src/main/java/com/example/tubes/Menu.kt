@@ -16,27 +16,37 @@ class Menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-        setContentView(R.layout.activity_main)
-        supportActionBar?.hide()
+        getSupportActionBar()?.hide()
 
-        replaceFragment(homeFragment)
+        setThatFragments(homeFragment)
         val bottom: BottomNavigationView = findViewById(R.id.bottom_navigation)
-        bottom.setOnNavigationItemSelectedListener {
+        bottom.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.ic_home -> replaceFragment(homeFragment)
-                R.id.ic_user->replaceFragment(profileFragment)
-                R.id.ic_build->replaceFragment(sukucadangFragment)
-                R.id.ic_assignment->replaceFragment(reservasiFragment)
+                R.id.itemHome ->
+                    setThatFragments(homeFragment)
+                R.id.itemAkun->
+                    setThatFragments(profileFragment)
+                R.id.itemBuild->
+                    setThatFragments(sukucadangFragment)
+                R.id.itemReservasi->
+                    setThatFragments(reservasiFragment)
             }
             true
         }
     }
 
-    private fun replaceFragment(fragment: Fragment) {
-        if (fragment != null) {
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container, fragment)
-            transaction.commit()
+//    private fun replaceFragment(fragment: Fragment) {
+//        if (fragment != null) {
+//            val transaction = supportFragmentManager.beginTransaction()
+//            transaction.replace(R.id.fragment_container, fragment)
+//            transaction.commit()
+//        }
+//    }
+
+    private fun setThatFragments(fragment: Fragment){
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragment_container,fragment)
+            commit()
         }
     }
 

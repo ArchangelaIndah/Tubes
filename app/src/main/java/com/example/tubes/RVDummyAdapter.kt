@@ -3,6 +3,7 @@ package com.example.tubes
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tubes.entity.dummy
@@ -29,6 +30,7 @@ class RVDummyAdapter(private val data: Array<dummy>) : RecyclerView.Adapter<RVDu
         val currentItem = data[position]
         holder.nama_barang.text = currentItem.namaBarang
         holder.harga.text = currentItem.harga.toString()
+        holder.barang.setImageResource(images[position])
     }
 
     override fun getItemCount(): Int {
@@ -38,5 +40,6 @@ class RVDummyAdapter(private val data: Array<dummy>) : RecyclerView.Adapter<RVDu
     class viewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val nama_barang : TextView = itemView.findViewById(R.id.nama_barang)
         val harga : TextView = itemView.findViewById(R.id.harga)
+        val barang : ImageView = itemView.findViewById(R.id.iv_barang)
     }
 }

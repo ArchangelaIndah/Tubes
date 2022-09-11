@@ -56,15 +56,18 @@ class MainActivity : AppCompatActivity() {
                 checkLogin = false
             }
 
-            if(username == "admin" && password == "0723")
+            if(username == "admin" && password == "admin")
                 checkLogin = true
             if(!checkLogin)
                 return@OnClickListener
+
+            val moveHome = Intent(this, Menu::class.java)
+            startActivity(moveHome)
         })
 
         btnDaftar.setOnClickListener{
-            val moveHome = Intent(this, Register::class.java)
-            startActivity(moveHome)
+            val moveRegis = Intent(this, Register::class.java)
+            startActivity(moveRegis)
         }
     }
 }
