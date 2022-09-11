@@ -36,4 +36,5 @@ class AkunFragment : Fragment() {
             }
         }
     }
+
 }

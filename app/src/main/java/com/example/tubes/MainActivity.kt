@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mainLayout: ConstraintLayout
     lateinit var mBundle: Bundle
 
-    lateinit var tUsername : String
-    lateinit var tPassword : String
+    var tUsername : String = ""
+    var tPassword : String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         getSupportActionBar()?.hide()
@@ -33,8 +33,10 @@ class MainActivity : AppCompatActivity() {
 
         if(intent.getBundleExtra("register")!=null){
             mBundle = intent.getBundleExtra("register")!!
-            inputUsername.getEditText()?.setText(mBundle.getString("Username"))
-            inputPassword.getEditText()?.setText(mBundle.getString("Password"))
+            tUsername = mBundle.getString("Username").toString()
+            tPassword = mBundle.getString("Password").toString()
+            inputUsername.getEditText()?.setText(tUsername)
+            inputPassword.getEditText()?.setText(tPassword)
 
         }
 
@@ -59,8 +61,14 @@ class MainActivity : AppCompatActivity() {
                 checkLogin = false
             }
 
-            if((username == "admin" && password == "admin") || (username == tUsername && password == tPassword))
+            if(username == "admin" && password == "admin")
                 checkLogin = true
+
+            if(intent.getBundleExtra("register")!=null){
+                if(username== tUsername && password == tPassword)
+                    checkLogin= true
+            }
+
             if(!checkLogin)
                 return@OnClickListener
 

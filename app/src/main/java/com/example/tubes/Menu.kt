@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import com.google.android.ads.mediationtestsuite.activities.HomeActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Menu : AppCompatActivity() {
